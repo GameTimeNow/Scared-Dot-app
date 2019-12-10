@@ -34,7 +34,12 @@ Vehicle.prototype.update = function(){
 }
 
 Vehicle.prototype.show = function(){
-	stroke(255);
+	if(rainbow){
+		colorMode(HSB, width, width, width);
+		stroke(this.pos.x, width, width);
+	} else {
+		stroke(255);
+	}
 	strokeWeight(r);
 	point(this.pos.x, this.pos.y);
 }

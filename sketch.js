@@ -4,7 +4,7 @@ var t = prompt("TEXT:");
 var fsize = 192;
 var r = 8;
 var sf = .1;
-
+var rainbow = false;
 
 function preload(){
 	font = loadFont("AvenirNextLTPro-Demi.otf");
@@ -32,6 +32,7 @@ function setup(){
 }
 
 function draw(){
+	colorMode(RGB,255,255,255);
 	background(51);
 	for (var i = 0; i < vehicles.length; i++){
 		var v = vehicles[i];
@@ -46,4 +47,8 @@ function mousePressed() {
 		var v = vehicles[i];
 		v.vel=p5.Vector.random2D().mult(30)
 	}
+}
+
+function toggleRainbow(){
+	rainbow = !rainbow;
 }
