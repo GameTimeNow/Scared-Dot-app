@@ -2,7 +2,7 @@ var font;
 var vehicles = [];
 var t = prompt("TEXT:");
 var fsize = 192;
-var r = 8;
+var r = <input type = "range" min="0" max="1000" value="0" step="1" id="slider"/>;
 var sf = .1;
 var rainbow = false;
 
